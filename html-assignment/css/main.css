@@ -1,6 +1,6 @@
 /* Inheritance-body */
 body{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
 }
 /* Multiple element selection */
@@ -9,7 +9,7 @@ header, footer {
 }
 /* class selector */
 .site-title {
-    color: skyblue;
+    color: darkblue;
 }
 /* ID selector */
 #my-image {
