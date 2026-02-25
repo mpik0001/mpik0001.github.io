@@ -34,10 +34,10 @@ nav a {
 }
 /* Add background and border to links */
 nav a {
-    background-color: pink;
-    border: 1px darkblue;
+    background-color: skyblue;
+    border: 2px darkblue;
 }
 /* change background colour on hover */
-nav a {
-    background-color: skyblue;
+nav a:hover {
+    background-color: crimson;
 }
