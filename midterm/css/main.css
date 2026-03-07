@@ -1,0 +1,11 @@
+/* styles page background */
+body{
+    background-color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* styles the header */
+.wrapper{
+    width: 900px;
+    margin: auto;
+    background: lightgreen;
+}
