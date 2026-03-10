@@ -1,11 +1,47 @@
+/* arranges the position of h1 and image width */
+header{
+    position: relative;
+}
+header img{
+    width: 100%;
+}
+/* puts the title on the image */
+header h1{
+    padding: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-size: 48px;
+}
 /* styles page background */
 body{
-    background-color: aquamarine;
+    background-color: rgb(189, 235, 219);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-/* styles the header */
-.wrapper{
+/* styles the container */
+.container{
     width: 900px;
     margin: auto;
-    background: lightgreen;
+    background: rgb(189, 240, 189);
+}
+/* styles the navigation */
+.nav{
+    text-align:center;
+    border-bottom:1px solid gray;
+}
+.nav a{
+    text-decoration:none;
+    color:black;
+    padding:15px 60px;
+    display:inline-block;
+    border-right:1px solid gray;
+}
+.nav a:last-child{
+    border-right:none;
+}
+/* Floats the image */
+.float-img{
+    float:left;
+    width:200px;
+    margin-right:15px;
 }
