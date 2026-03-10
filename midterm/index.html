@@ -26,7 +26,7 @@
         <h2>Veggies</h2>
          <img src="images/veggies.png" class="img" alt="Veggies">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vitae magnam blanditiis laborum. Repellat dolorem iste facilis voluptatibus, nemo non maxime veritatis vitae dicta ad quod quasi rerum adipisci atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corrupti rerum mollitia cum, illo iure aspernatur odit accusantium tempora voluptatem, earum, magni tenetur nisi adipisci maxime dolor itaque sed quas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. In impedit repellat amet pariatur perspiciatis distinctio totam suscipit vel delectus, possimus blanditiis exercitationem illum consequatur culpa doloremque consectetur beatae nisi dolor!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi vel perferendis dolorem molestias cumque sunt velit maiores sed ipsam voluptas. Eligendi quasi dolorum nisi laudantium, debitis officiis quidem illo impedit!quas?Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem hic accusantium doloremque a laboriosam eos repellat, ipsa, voluptatibus, et dicta necessitatibus vel molestias iusto expedita ullam eius quae. Voluptatem, rerum?</p>
+
     </article>
     <!-- adds a list of facts/benefits of vegetables -->
     <article>
@@ -38,9 +38,10 @@
             <li>Reiciendis eligendi impedit pariatur facilis repellendus.</li>
         </ul>
     </article>
+    <!-- adding a form -->
     <article>
         <h4>Contact to learn more about</h4>
-        <form> 
+     <form action="index.html" method="post"> 
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name">  
 
@@ -49,6 +50,19 @@
             
             <label for="message">Your Message</label> 
             <textarea id="message"><textarea> 
+         
+            <h5>Would you like to join the program?</h5>
+            <form action="index.html" method="post">
+             <label for="agree">Yes</label>
+             <input type="radio" id="agree" name="join" value="yes"> 
+             <label for="agree">No</label>
+             <input type="radio" id="disagree" name="join" value="no"> 
+             <label for="unsure">Maybe</label>
+             <input type="radio" id="unsure" name="join" value="maybe"> 
+          </form>
+             <br>
+            <button type="submit">SEND</button>
+    
         </form>
     </article>
 
