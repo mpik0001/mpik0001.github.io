@@ -47,12 +47,14 @@ body{
     margin-right:15px;
     margin-left: 15px;
 }
+/* added margin to facts list h2 and h3 */
 ul {
     margin-left: 1%;
 }
 h2, h3 {
      margin-left: 2%;
 }
+/* styling the form */
 form{
     border:1px solid gray;
     padding:20px;
