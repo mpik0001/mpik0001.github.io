@@ -15,8 +15,6 @@ header h1{
     transform: translate(-50%, -50%);
     color: white;
     font-size: 80px;
-    font-display: auto;
-
 }
 /* styles page background */
 body{
@@ -59,17 +57,32 @@ article{
 ul {
     margin-left: 1%;
 }
-h2, h3 {
-     margin-left: 2%;
+h2, h3, h4 {
+     margin-left: 1%;
+     font-size: medium;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 /* styling the form */
 form{
     border:1px solid gray;
     padding:20px;
 }
-
-input, textarea{
+/* puts the selection section on the same line */
+input[type="text"],
+input[type="email"],
+textarea{
     width:100%;
     margin-bottom:15px;
     padding:8px;
+}
+/* styles the selection section */
+.selection{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+/* positions the footer on the right */
+footer{
+   text-align:right;
+   padding:20px;
 }
