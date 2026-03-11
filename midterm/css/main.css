@@ -2,19 +2,20 @@
 header{
     position: relative;
 }
+/* makes the image as wide as the container and reduces the height */
 header img{
     width:100%;
     height: max-content;
-    display:block;
 }
-/* puts the title on the image */
+/* puts the title on the image and styles h1*/
 header h1{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 100px;
+    font-size: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 /* styles page background */
 body{
@@ -27,17 +28,20 @@ body{
     margin: auto;
     background: rgb(214, 239, 214);
 }
-/* styles the navigation */
+/* aligns the navigation to the center*/
 .nav{
     text-align:center;
 }
+/* styles the navigation */
 .nav a{
     text-decoration:none;
     color:black;
     padding:10px 120px;
     display:inline-block;
     border-right:1px solid black;
+    margin-bottom: 15px;
 }
+/* do not add a border on the right of the last child (contact) */
 .nav a:last-child{
     border-right:none;
 }
@@ -49,9 +53,11 @@ body{
     margin-bottom: 10px;
     margin-left: 1%;
 }
+/* automatically add a top margin to paragraph */
 p{
     margin-top: auto;
 }
+/* Prevents content from wrapping around the floated image and adds spacing inside the article */
 article{
     clear: both;
     padding: 5px;
@@ -66,12 +72,12 @@ h2, h3, h4 {
      font-size: medium;
      font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-/* styling the form */
+/* styles the form */
 form{
     border:1px solid gray;
     padding:20px;
-    margin-right: 2px;
 }
+/* Styles only inputs where type = text,type = email and textarea */
 input[type="text"],
 input[type="email"],
 textarea{
@@ -79,6 +85,11 @@ textarea{
     margin-bottom:15px;
     padding:8px;
     margin-right: 15px;
+    box-sizing: border-box;
+/* makes the message box bigger */
+}
+textarea{
+    height: 120px;
 }
 /* styles the selection section */
 .selection{
