@@ -5,7 +5,7 @@ header{
 /* makes the image as wide as the container and reduces the height */
 header img{
     width:100%;
-    height: max-content;
+    height: auto;
 }
 /* puts the title on the image and styles h1*/
 header h1{
