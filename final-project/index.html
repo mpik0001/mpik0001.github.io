@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project</title>
+    <title>Three Star Media</title>
 </head>
 <body>
      <!-- adds the header -->
@@ -17,11 +17,13 @@
 
             <!-- adds the Navigation -->
             <nav class="main-nav">
-                    <a href="#">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Services</a>
-                    <a href="#">Team</a>
-                    <a href="#">Contact</a>
+                    <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
             </nav>
               <!-- adds the Search bar -->
             <div class="search">
@@ -138,69 +140,72 @@
                 </article>
             </div>
         </section>
-         <!-- contact section -->
-        <section class="contact">
-            <div class="container">
+         <!-- adds contact section -->
+       <section class="contact">
+    <div class="container">
 
-                <h2>Contact Us</h2>
+        <h2>Contact Us</h2>
 
-                <div class="contact-content">
+        <div class="contact-content">
 
-                    <!-- form -->
-                    <div class="contact-form">
-                        <h3>Send us a message</h3>
-                        <form>
-                            <label>Full Name</label>
-                            <input type="text">
+            <div class="contact-form">
+                <h3>Send us a message</h3>
+                <form>
+                    <label for="name">Full Name</label>
+                    <input id="name" type="text">
 
-                            <label>Email</label>
-                            <input type="email">
+                    <label for="email">Email</label>
+                    <input id="email" type="email">
 
-                            <label>Message</label>
-                            <textarea></textarea>
+                    <label for="msg">Message</label>
+                    <textarea id="msg"></textarea>
 
-                            <button type="submit">Send</button>
-                        </form>
-                    </div>
-
-                    <!-- location -->
-                    <div class="location">
-                        <h3>Location</h3>
-                        <img src="images/map.jpeg" alt="Map location">
-                    </div>
-
-                </div>
-
+                    <button type="submit">Send</button>
+                </form>
             </div>
-        </section>
-        <!-- hours -->
-        <section class="hours">
-            <div class="container">
 
-                <h2>Hours of Operation</h2>
+            <div class="location">
+                <h3>Location</h3>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Days</th>
-                            <th>Hours</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>Monday - Friday</td>
-                            <td>9 AM - 6 PM</td>
-                        </tr>
-                        <tr>
-                            <td>Saturday - Sunday</td>
-                            <td>Closed</td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                <!-- adds a Google Maps iframe embed -->
+                <iframe 
+                    src="https://www.google.com/maps?q=Algonquin+College&output=embed"
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    loading="lazy">
+                </iframe>
             </div>
-        </section>
+
+        </div>
+
+        <!-- adds hours -->
+        <div class="hours">
+            <h3>Hours of Operation</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Days</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday - Friday</td>
+                        <td>9 AM - 6 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday - Sunday</td>
+                        <td>Closed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+
  </main>
    <!-- FOOTER -->
     <footer class="site-footer">
