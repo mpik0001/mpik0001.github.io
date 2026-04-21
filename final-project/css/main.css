@@ -58,3 +58,21 @@ body {
     background: #ffe6ac;
     padding: 2rem 0;
 }
+/* Styles the services section */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* single column on mobile */
+    gap: 1rem;
+}
+/* styles individual service card */
+.service {
+    background: #ffe6ac;
+    padding: 1rem;
+}
+
+/* Styles the vision section */
+.vision {
+    background: url("../images/vision.jpg") no-repeat center/cover; /* adds a background image */
+    color: white;
+    padding: 60px 20px;
+}
