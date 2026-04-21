@@ -23,3 +23,24 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
+/* removes bullets */
+.main-nav ul {
+    list-style: none;
+}
+/* removes underlines and adds color */
+.main-nav a {
+    color: #c78c06;
+    text-decoration: none;
+}
+
+/* adds a background image */
+.banner {
+    background: url("../images/main-banner.jpg") no-repeat center/cover;
+    color: white;
+    padding: 80px 20px;
+}
+
+.banner-content {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+}
