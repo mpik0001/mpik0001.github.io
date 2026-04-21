@@ -1,0 +1,21 @@
+/* adds a rest code */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* The maximum width of the container is 1200px */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+/* adds a min-width media query for the screen size of 760px and above */
+@media (min-width: 760px) {
+
+    .site-header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
