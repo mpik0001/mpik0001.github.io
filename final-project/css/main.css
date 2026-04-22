@@ -1,203 +1,311 @@
-/* adds a reset code */
+/* reset */
+/* removes default browser spacing and ensures padding/border don't affect width */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* Sets the maximum width of the container at 1200px */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-/* adds a min-width media query for the screen size of 760px and above */
-@media (min-width: 760px) {
-
-/* Stacks items vertically for mobile */
-.site-header .container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 1rem;
-    background-color: #222;}
+    margin: 0; /* removes default outer spacing */
+    padding: 0; /* removes default inner spacing */
+    box-sizing: border-box; /* makes width include padding and border */
 }
 
-/* Uses the 'Open Sans' Google font for the webpage*/
+/* base styles */
 body {
-    font-family: 'Open Sans', sans-serif;
-    
+    font-family: 'Open Sans', sans-serif; /* applies google font */
+    line-height: 1.6; /* improves text readability by adding vertical spacing */
 }
 
-body h1 {
-    font-size: 60px;
+h1 {
+    font-size: 3rem; /* makes main heading large */
+    margin-bottom: 1rem; /* adds space below heading */
 }
 
-body p {
-    font-size: 12px;
+h2 {
+    margin-bottom: 1rem; /* adds spacing below section titles */
 }
 
-/* removes bullets */
+p {
+    font-size: 14px; /* controls paragraph text size */
+}
+
+/* container centers content and limits width */
+.container {
+    width: 90%; /* allows small margin on both sides */
+    max-width: 1200px; /* prevents content from stretching too wide */
+    margin: auto; /* centers container horizontally */
+}
+
+/* styles the header */
+/* mobile layout */
+.site-header {
+    background: #222; /* dark background color */
+}
+
+.site-header .container {
+    display: flex; /* enables flexbox layout */
+    flex-direction: column; /* stacks items vertically */
+    gap: 1rem; /* adds space between elements */
+    padding: 1rem; /* adds space inside header */
+}
+
+/* styles the logo  */
+.logo img {
+    width: 60px; /* fixes logo width */
+}
+
+/* removes list bullets */
 .main-nav ul {
     list-style: none;
 }
 
-/* removes underlines and adds color */
+/* styles navigation links */
 .main-nav a {
-    color: #c78c06;
-    text-decoration: none;
+    color: #c78c06; /* gold color */
+    text-decoration: none; /* removes underline */
+    display: block; /* makes link fill clickable area */
+    padding: 12px 0; /* adds vertical spacing */
 }
 
-/* adds a background image */
+/* highlights first navigation link */
+.main-nav li:first-child a  {
+    background: #c78c06; /* gold background */
+    color: #222; /* dark text */
+    padding: 8px; /* adds spacing inside */
+}
+
+/* styles the search bar */
+.search form {
+    display: flex; /* places input and button side by side */
+}
+
+.search input {
+    padding: 8px; /* adds inner spacing */
+    border: none; /* removes default border */
+    border-radius: 3px 0 0 3px; /* rounds left corners */
+}
+
+.search button {
+    background: #c78c06; /* gold background */
+    border: none; /* removes border */
+    padding: 8px 12px; /* adds spacing */
+    border-radius: 0 3px 3px 0; /* rounds right corners */
+    cursor: pointer; /* shows pointer on hover */
+}
+
+/* styles the banner section */
 .banner {
-    background: url("../images/main-banner.jpg") no-repeat center/cover;
-    color: white;
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 80px 20px;
+    background: url("../images/main-banner.jpg") no-repeat center/cover; 
+    /* adds background image, centers it, and covers full area */
+
+    color: white; /* makes text visible on dark background */
+    padding: 100px 20px; /* adds vertical and horizontal spacing */
 }
 
-/* adds an overlay to improve text readability */
+/* adds an overlay to improve readability */
 .banner-content {
-    background: rgba(0,0,0,0.6);
-    padding: 20px;
-    width: 70%;
+    background: rgba(0,0,0,0.7); /* dark transparent background */
+    padding: 30px; /* adds spacing inside */
     margin: auto;
+    max-width: 90%; /* limits width of content */
 }
 
-/* styles the button */
+/* styles the main button */
 .btn {
-    display: inline-block;
-    background: #c78c06;
-    color: black;
-    padding: 10px;
-    text-decoration: none;
-    margin-top: 10px;
+    display: inline-block; /* allows padding and width */
+    background: #c78c06; /* gold background */
+    color: black; /* dark text */
+    padding: 12px 20px; /* adds spacing inside button */
+    text-decoration: none; /* removes underline */
+    margin-top: 10px; /* adds space above button */
 }
 
-/* Styles the about section */
+/* styles the about section */
 .about {
-    background: #ffe6ac;
-    padding: 2rem 0;
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    background: #ffe6ac; /* light background color */
+    padding: 2rem 0; /* vertical spacing */
 }
-
 
 .about-image img {
-    width: 100%;
-    height: 100%;
-    margin-left: 10px;
+    width: 100%; /* makes image responsive */
 }
 
+/* styles the services section */
+.services {
+    padding: 2rem 0; /* vertical spacing */
+}
 
-/* Styles the services section */
 .services-grid {
-    display: grid;
+    display: grid; /* enables grid layout */
     grid-template-columns: 1fr; /* single column on mobile */
-    gap: 1rem;
+    gap: 1rem; /* spacing between items */
 }
-/* styles individual service card */
+
+/* styles the service card */
 .service {
-    background: #ffe6ac;
-    padding: 1rem;
+    background: #ffe6ac; /* light background */
 }
 
-/* Styles the vision section */
+.service img {
+    width: 100%; /* full width image */
+    height: 200px; /* fixed height */
+    object-fit: cover; /* prevents image distortion */
+}
+
+.service h3,
+.service p {
+    padding: 10px; /* adds spacing inside text */
+}
+
+/* styles the service button */
+.service a {
+    display: block; /* full width button */
+    background: #222; /* dark background */
+    color: white; /* white text */
+    text-align: center; /* centers text */
+    padding: 12px; /* spacing inside */
+    margin: 10px; /* spacing around button */
+    text-decoration: none; /* removes underline */
+}
+
+/* styles the vision section */
 .vision {
-    background: url("../images/vision.jpg") no-repeat center/cover; /* adds a background image */
+    background: url("../images/vision.jpg") no-repeat center/cover;
     color: white;
-    padding: 60px 20px;
+    padding: 80px 20px;
+    position: relative; /* allows overlay positioning */
 }
 
-/* Styles the team section */
+/* styles the overlay layer */
+.vision::before {
+    content: ""; /* required for pseudo element */
+    position: absolute; /* positions overlay */
+    inset: 0; /* stretches overlay full area */
+    background: rgba(0,0,0,0.6); /* dark transparent layer */
+}
+
+/* ensures content appears above overlay */
+.vision .container {
+    position: relative;
+}
+
+/* styles the team section */
+.team {
+    padding: 2rem 0;
+}
+
 .team-member {
-    margin-bottom: 1rem;
     background: #ffe6ac;
+    margin-bottom: 1rem;
 }
 
-/* Styles the contact section */
-/* Uses Flexbox */
+.team-member img {
+    width: 100%;
+}
+
+.team-member div {
+    padding: 15px;
+}
+
+/*  styles the contact section */
+.contact {
+    padding: 2rem 0;
+}
+
 .contact-content {
     display: flex;
-    flex-direction: column; /* stacked on mobile */
-    gap: 1rem;
+    flex-direction: column; /* stacks items vertically */
+    gap: 2rem; /* spacing between items */
 }
 
-/* Form inputs full width */
+/* styles the form inputs */
 input,
 textarea {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 100%; /* full width */
+    padding: 8px; /* inner spacing */
+    margin-bottom: 10px; /* space below each field */
 }
 
-/* Styles the table */
+/* table styling */
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 100%; /* full width */
+    border-collapse: collapse; /* removes double borders */
 }
 
-/* Styles table cell */
+th {
+    background: #ffe6ac; /* header background */
+}
+
 th,
 td {
-    border: 1px solid #222;
-    padding: 10px;
+    border: 1px solid #222; /* adds border */
+    padding: 12px; /* inner spacing */
 }
 
-/* Styles the footer*/
+/* styles the footer */
 .site-footer {
-    background: #222;
-    color: #c78c06;
-    text-align: center;
-    padding: 1rem;
+    background: #222; /* dark background */
+    color: #c78c06; /* gold text */
+    text-align: center; /* centers text */
+    padding: 1rem; /* spacing inside */
 }
 
-/* Desktop & tablet layout adjustments */
-@media (min-width: 760px) { /* adds a min-width media query for the screen size of 760px and above */
+/* desktop layout */
+@media (min-width: 760px) {
 
-    /* Header layout switches to horizontal */
     .site-header .container {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: row; /* horizontal layout */
+        align-items: center; /* vertical alignment */
+    }
+
+    .main-nav {
+        margin: 0 auto; /* centers nav */
+    }
+
+    .main-nav ul {
+        display: flex; /* horizontal menu */
+        gap: 20px; /* spacing between items */
+    }
+
+    .search {
+        margin-left: auto; /* pushes search to right */
+    }
+
+    .about .container {
+        display: flex; /* side-by-side layout */
+        gap: 1rem;
         align-items: center;
     }
 
-    /* Navigation becomes horizontal */
-    .main-nav ul {
-        display: flex;
-        gap: 20px;
+    .about-image,
+    .about-text {
+        flex: 1; /* equal width */
     }
 
-    /* About section side-by-side layout */
-    .about .container {
-        display: flex;
-        gap: 1rem;
-    }
-
-    /* Services grid becomes 3 columns */
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(6, 1fr); /* creates 6 columns */
     }
 
-    /* Contact layout side-by-side */
-    .contact-content {
-        flex-direction: row;
+    .service:nth-child(1),
+    .service:nth-child(2) {
+        grid-column: span 3; /* top row takes half width each */
     }
 
-    /* Team members side-by-side */
+    .service:nth-child(3),
+    .service:nth-child(4),
+    .service:nth-child(5) {
+        grid-column: span 2; /* bottom row 3 equal columns */
+    }
+
     .team-member {
-        display: flex;
-        gap: 1rem;
+        display: flex; /* horizontal layout */
     }
-}
 
-.btn2, .btn3, .btn4, .btn5, .btn6 {
-    display: inline-block;
-    width: 100%;
-    background: black;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    margin-top: 5px;
+    .team-member img {
+        width: 50%; /* image half width */
+    }
+
+    .team-member div {
+        width: 50%; /* text half width */
+    }
+
+    .contact-content {
+        flex-direction: row; /* side-by-side */
+    }
 }
