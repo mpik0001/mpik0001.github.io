@@ -1,4 +1,3 @@
-/* reset */
 /* removes default browser spacing and ensures padding/border don't affect width */
 * {
     margin: 0; /* removes default outer spacing */
@@ -13,11 +12,11 @@ body {
 }
 
 h1 {
-    font-size: 3rem; /* makes main heading large */
+    font-size: 4rem; /* makes main heading larger */
     margin-bottom: 1rem; /* adds space below heading */
 }
 
-h2 {
+h2, h3 {
     margin-bottom: 1rem; /* adds spacing below section titles */
 }
 
@@ -54,6 +53,8 @@ p {
 /* removes list bullets */
 .main-nav ul {
     list-style: none;
+    justify-content: space-between; /* spreads them across */
+    align-items: center;        /* vertically aligns nicely */
 }
 
 /* styles navigation links */
@@ -107,7 +108,7 @@ p {
     /* adds background image, centers it, and covers full area */
 
     color: white; /* makes text visible on dark background */
-    padding: 100px 20px; /* adds vertical and horizontal spacing */
+    padding: 80px 50px; /* adds vertical and horizontal spacing */
 }
 
 /* adds an overlay to improve readability */
@@ -115,7 +116,7 @@ p {
     background: rgba(0,0,0,0.7); /* dark transparent background */
     padding: 30px; /* adds spacing inside */
     margin: auto;
-    max-width: 90%; /* limits width of content */
+    max-width: 70%; /* limits width of content */
 }
 
 /* styles the main button */
@@ -125,7 +126,7 @@ p {
     color: black; /* dark text */
     padding: 12px 20px; /* adds spacing inside button */
     text-decoration: none; /* removes underline */
-    margin-top: 10px; /* adds space above button */
+    margin-top: 12px; /* adds space above button */
 }
 
 /* styles the about section */
@@ -135,7 +136,12 @@ p {
 }
 
 .about-image img {
-    width: 100%; /* makes image responsive */
+    width: 80%; /* makes image responsive */
+    margin-left: 115px;
+}
+
+.about-text {
+    margin-right: 115px;
 }
 
 .about-image {
@@ -207,20 +213,16 @@ p {
 .team {
     padding: 2rem 0;
 }
-
 .team-member {
     background: #ffe6ac;
     margin-bottom: 1rem;
 }
-
 .team-member img {
     width: 100%;
 }
-
 .team-member div {
     padding: 15px;
 }
-
 .team-member hr {
     color: #c78c06;
 }
@@ -266,6 +268,12 @@ th,
 td {
     border: 1px solid #222; /* adds border */
     padding: 12px; /* inner spacing */
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    border: 0;
 }
 
 /* styles the footer */
