@@ -22,7 +22,8 @@ h2 {
 }
 
 p {
-    font-size: 14px; /* controls paragraph text size */
+    font-size: 12px; /* controls paragraph text size */
+    margin-top: 15px;
 }
 
 /* container centers content and limits width */
@@ -60,7 +61,7 @@ p {
     color: #c78c06; /* gold color */
     text-decoration: none; /* removes underline */
     display: block; /* makes link fill clickable area */
-    padding: 12px 0; /* adds vertical spacing */
+    padding: 15px 20px; /* makes links bigger */
 }
 
 /* highlights first navigation link */
@@ -72,23 +73,34 @@ p {
 
 /* styles the search bar */
 .search form {
-    display: flex; /* places input and button side by side */
+    position: relative; /* allows button positioning */
+    width: 200px; /* control overall size */
 }
 
+/* input field */
 .search input {
-    padding: 8px; /* adds inner spacing */
-    border: none; /* removes default border */
-    border-radius: 3px 0 0 3px; /* rounds left corners */
+    width: 100%; /* full width */
+    padding: 8px 40px 8px 10px; /* right padding makes space for button */
+    border: 2px solid #c78c06; /* gold border */
+    outline: none;
+    font-size: 14px;
 }
 
+/* button inside input */
 .search button {
-    background: #c78c06; /* gold background */
-    border: none; /* removes border */
-    padding: 8px 12px; /* adds spacing */
-    border-radius: 0 3px 3px 0; /* rounds right corners */
-    cursor: pointer; /* shows pointer on hover */
-}
+    position: absolute; /* places it inside input */
+    right: 0; /* stick to right edge */
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    height: 37px;
+    background: #222;
+    border: 2px solid #c78c06; /* gold border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
 /* styles the banner section */
 .banner {
     background: url("../images/main-banner.jpg") no-repeat center/cover; 
@@ -152,8 +164,7 @@ p {
     object-fit: cover; /* prevents image distortion */
 }
 
-.service h3,
-.service p {
+.service h3, .service p {
     padding: 10px; /* adds spacing inside text */
 }
 
@@ -174,14 +185,6 @@ p {
     color: white;
     padding: 80px 20px;
     position: relative; /* allows overlay positioning */
-}
-
-/* styles the overlay layer */
-.vision::before {
-    content: ""; /* required for pseudo element */
-    position: absolute; /* positions overlay */
-    inset: 0; /* stretches overlay full area */
-    background: rgba(0,0,0,0.6); /* dark transparent layer */
 }
 
 /* ensures content appears above overlay */
@@ -216,6 +219,10 @@ p {
 
 .team-member div {
     padding: 15px;
+}
+
+.team-member hr {
+    color: #c78c06;
 }
 
 /*  styles the contact section */
@@ -265,7 +272,7 @@ td {
 .site-footer {
     background: #222; /* dark background */
     color: #c78c06; /* gold text */
-    text-align: center; /* centers text */
+    text-align: left; /* centers text */
     padding: 1rem; /* spacing inside */
 }
 
